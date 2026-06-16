@@ -3,35 +3,50 @@ import { Terminal, Fingerprint } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Skills() {
-  const centerNode = { id: 'center', label: 'RONIT MAURYA', x: 50, y: 45, color: '#FFFFFF' };
 
+  const centerNode = { id: 'center', label: 'RONIT MAURYA', x: 50, y: 50, color: '#FFFFFF' };
   const catNodes = [
-    { id: 'dev', label: 'Development', x: 50, y: 20, color: '#00E5FF' }, 
-    { id: 'ai', label: 'AI & ML', x: 20, y: 65, color: '#A855F7' },     
-    { id: 'cs', label: 'CS', x: 80, y: 65, color: '#00FF88' },        
+    { id: 'dev', label: 'Development', x: 50, y: 25, color: '#00E5FF' }, 
+    { id: 'cs', label: 'Comp Science', x: 75, y: 50, color: '#00FF88' }, 
+    { id: 'ai', label: 'AI & ML', x: 50, y: 75, color: '#A855F7' },      
+    { id: 'tools', label: 'Tools & Tech', x: 25, y: 50, color: '#F59E0B' } 
   ];
 
+  
   const skillNodes = [
-    { id: 'cpp', label: 'C++', parent: 'dev', x: 10, y: 15, color: '#00E5FF' },
-    { id: 'mongo', label: 'MongoDB', parent: 'dev', x: 22, y: 10, color: '#00E5FF' },
-    { id: 'bash', label: 'Bash', parent: 'dev', x: 35, y: 6, color: '#00E5FF' },
-    { id: 'js', label: 'JavaScript', parent: 'dev', x: 50, y: 3, color: '#00E5FF' },
-    { id: 'react', label: 'React', parent: 'dev', x: 65, y: 6, color: '#00E5FF' },
-    { id: 'node', label: 'Node.js', parent: 'dev', x: 78, y: 10, color: '#00E5FF' },
-    { id: 'sql', label: 'SQL', parent: 'dev', x: 90, y: 15, color: '#00E5FF' },
-    { id: 'sklearn', label: 'Sklearn', parent: 'ai', x: 5, y: 55, color: '#A855F7' },
-    { id: 'rag', label: 'RAG', parent: 'ai', x: 5, y: 75, color: '#A855F7' },
-    { id: 'tf', label: 'TensorFlow', parent: 'ai', x: 15, y: 88, color: '#A855F7' },
-    { id: 'py', label: 'Python', parent: 'ai', x: 32, y: 92, color: '#A855F7' },
-    { id: 'oops', label: 'OOPS', parent: 'cs', x: 68, y: 92, color: '#00FF88' },
-    { id: 'dsa', label: 'DSA', parent: 'cs', x: 85, y: 88, color: '#00FF88' },
-    { id: 'operating system', label: 'Operating System', parent: 'cs', x: 95, y: 75, color: '#00FF88' },
-    { id: 'computer network', label: 'Computer Network', parent: 'cs', x: 95, y: 55, color: '#00FF88' },
-    //{ id: 'compiler', label: 'Compiler', parent: 'cs', x: 125, y: 70, color: '#00FF88' },
+    // --- Development Skills (Spreading upwards) ---
+    { id: 'react', label: 'React', parent: 'dev', x: 50, y: 6, color: '#00E5FF' },
+    { id: 'js', label: 'JavaScript', parent: 'dev', x: 35, y: 10, color: '#00E5FF' },
+    { id: 'node', label: 'Node.js', parent: 'dev', x: 65, y: 10, color: '#00E5FF' },
+    { id: 'cpp', label: 'C++', parent: 'dev', x: 20, y: 15, color: '#00E5FF' },
+    { id: 'mongo', label: 'MongoDB', parent: 'dev', x: 80, y: 15, color: '#00E5FF' },
+    { id: 'auth', label: 'User Auth', parent: 'dev', x: 15, y: 28, color: '#00E5FF' },
+    { id: 'upi', label: 'UPI Integration', parent: 'dev', x: 85, y: 28, color: '#00E5FF' },
+
+    // --- Tools & Tech Skills (Spreading leftwards) ---
+    { id: 'vscode', label: 'VS Code', parent: 'tools', x: 5, y: 50, color: '#F59E0B' },
+    { id: 'git', label: 'Git & GitHub', parent: 'tools', x: 10, y: 38, color: '#F59E0B' },
+    { id: 'netlify', label: 'Vercel / Netlify', parent: 'tools', x: 10, y: 62, color: '#F59E0B' },
+    { id: 'postman', label: 'Postman', parent: 'tools', x: 22, y: 36, color: '#F59E0B' },
+    { id: 'bash', label: 'Linux / Bash', parent: 'tools', x: 22, y: 64, color: '#F59E0B' },
+
+    // --- AI & ML Skills (Spreading downwards) ---
+    { id: 'py', label: 'Python', parent: 'ai', x: 50, y: 94, color: '#A855F7' },
+    { id: 'tf', label: 'TensorFlow', parent: 'ai', x: 35, y: 90, color: '#A855F7' },
+    { id: 'rag', label: 'RAG', parent: 'ai', x: 65, y: 90, color: '#A855F7' },
+    { id: 'sklearn', label: 'Sklearn', parent: 'ai', x: 20, y: 85, color: '#A855F7' },
+    { id: 'genai', label: 'Image Gen AI', parent: 'ai', x: 80, y: 85, color: '#A855F7' },
+
+    // --- Computer Science Skills (Spreading rightwards) ---
+    { id: 'oops', label: 'OOPS', parent: 'cs', x: 95, y: 50, color: '#00FF88' },
+    { id: 'dsa', label: 'DSA', parent: 'cs', x: 88, y: 38, color: '#00FF88' },
+    { id: 'os', label: 'Operating System', parent: 'cs', x: 88, y: 62, color: '#00FF88' },
+    { id: 'sql', label: 'SQL', parent: 'cs', x: 78, y: 35, color: '#00FF88' },
+    { id: 'cn', label: 'Computer Network', parent: 'cs', x: 78, y: 65, color: '#00FF88' },
   ];
 
   return (
-    <section id="skills" className="py-24 relative z-10 w-full overflow-hidden flex flex-col items-center">
+    <section id="skills" className="py-24 relative z-10 w-full overflow-hidden flex flex-col items-center bg-transparent">
       
       <style>
         {`
@@ -51,7 +66,7 @@ export default function Skills() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ margin: "-50px" }} // removed once: true
+          viewport={{ margin: "-50px" }}
           className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00FF88]/30 bg-[#00FF88]/5 text-xs text-[#00FF88] shadow-[0_0_15px_rgba(0,255,136,0.2)] mb-4"
         >
           <Terminal className="w-4 h-4" />
@@ -61,7 +76,7 @@ export default function Skills() {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ margin: "-50px" }} // removed once: true
+          viewport={{ margin: "-50px" }}
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2"
         >
@@ -70,7 +85,7 @@ export default function Skills() {
       </div>
 
       {/* Network Graph Container */}
-      <div className="relative w-full max-w-[1200px] aspect-[4/5] sm:aspect-square md:aspect-[21/10] mx-auto">
+      <div className="relative w-full max-w-[1200px] aspect-[4/5] sm:aspect-square md:aspect-[21/10] mx-auto mt-4">
         
         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
           
@@ -84,8 +99,8 @@ export default function Skills() {
                 strokeWidth="2" 
                 initial={{ pathLength: 0, opacity: 0 }}
                 whileInView={{ pathLength: 1, opacity: 0.3 }}
-                viewport={{ margin: "-50px" }} // Trigger every time
-                transition={{ duration: 0.4, delay: 0.2 + (index * 0.1) }} // Sped up
+                viewport={{ margin: "-50px" }}
+                transition={{ duration: 0.4, delay: 0.2 + (index * 0.1) }}
               />
               <motion.line 
                 x1={`${centerNode.x}%`} y1={`${centerNode.y}%`} 
@@ -97,7 +112,7 @@ export default function Skills() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 0.8 }}
                 viewport={{ margin: "-50px" }}
-                transition={{ duration: 0.3, delay: 0.8 }} // Appears quicker
+                transition={{ duration: 0.3, delay: 0.8 }}
               />
             </g>
           ))}
@@ -115,7 +130,7 @@ export default function Skills() {
                   initial={{ pathLength: 0, opacity: 0 }}
                   whileInView={{ pathLength: 1, opacity: 0.15 }}
                   viewport={{ margin: "-50px" }}
-                  transition={{ duration: 0.2, delay: 0.5 + (index * 0.03) }} // Sped up
+                  transition={{ duration: 0.2, delay: 0.5 + (index * 0.03) }}
                 />
                 <motion.line 
                   x1={`${cat.x}%`} y1={`${cat.y}%`} 
@@ -127,7 +142,7 @@ export default function Skills() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 0.5 }}
                   viewport={{ margin: "-50px" }}
-                  transition={{ duration: 0.3, delay: 1.2 }} // Appears quicker
+                  transition={{ duration: 0.3, delay: 1.2 }}
                 />
               </g>
             );
@@ -158,7 +173,7 @@ export default function Skills() {
             initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
             whileInView={{ scale: 1, opacity: 1, x: '-50%', y: '-50%' }}
             viewport={{ margin: "-50px" }}
-            transition={{ type: 'spring', damping: 12, delay: 0.4 + (index * 0.1) }} // Sped up
+            transition={{ type: 'spring', damping: 12, delay: 0.4 + (index * 0.1) }}
             className="absolute z-20 cursor-pointer transition-all duration-300 hover:scale-110"
             style={{ left: `${cat.x}%`, top: `${cat.y}%` }}
             onMouseEnter={(e) => {
@@ -189,7 +204,7 @@ export default function Skills() {
             initial={{ scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
             whileInView={{ scale: 1, opacity: 1, x: '-50%', y: '-50%' }}
             viewport={{ margin: "-50px" }}
-            transition={{ type: 'spring', damping: 15, delay: 0.8 + (index * 0.03) }} // Sped up
+            transition={{ type: 'spring', damping: 15, delay: 0.8 + (index * 0.03) }}
             className="absolute z-10 cursor-pointer transition-all duration-300 hover:scale-125 hover:z-30"
             style={{ left: `${skill.x}%`, top: `${skill.y}%` }}
             onMouseEnter={(e) => {
