@@ -48,8 +48,7 @@ export default function Footer() {
               <a href="https://github.com/Ronitmaurya53" className="p-3 rounded-md bg-[#09111E] border border-white/5 text-gray-400 hover:text-[#00FF88] hover:border-[#00FF88]/50 hover:shadow-[0_0_15px_rgba(0,255,136,0.2)] transition-all duration-300">
                 <FiGithub className="w-5 h-5" />
               </a>
-              <a href="www.linkedin.com/in/
-ronit-maurya-12b75727b
+              <a href="https://linkedin.com/in/ronit-maurya-12b75727b
 " className="p-3 rounded-md bg-[#09111E] border border-white/5 text-gray-400 hover:text-[#00E5FF] hover:border-[#00E5FF]/50 hover:shadow-[0_0_15px_rgba(0,229,255,0.2)] transition-all duration-300">
                 <FiLinkedin className="w-5 h-5" />
               </a>
