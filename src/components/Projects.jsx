@@ -11,8 +11,8 @@ export default function Projects() {
       desc: 'Developed a responsive Gaming Website featuring game collections, modern UI/UX, interactive navigation, and optimized performance using modern web technologies.',
       tags: ['Multilingual AI', 'JavaScript', 'HTML', 'CSS'],
       color: '#00FF88', // Green glow
-      github: '#',
-      live: '#'
+      github: 'https://github.com/Ronitmaurya53/RPS-Gaming.com',
+      live: 'https://rpsgamimng.netlify.app/'
     },
     {
       id: 2,
@@ -21,8 +21,8 @@ export default function Projects() {
       desc: 'Developed PharmaShare, a platform designed to connect medicine donors and recipients, helping reduce medicine waste and improve access to essential healthcare resources.',
       tags: ['FULLSTACK', 'REACT.JS', 'Machine Learning', 'AI','MONGODB','EXPRESS.JS','NODE.JS'],
       color: '#00E5FF', // Cyan glow
-      github: '#',
-      live: '#'
+      github: 'https://github.com/Ronitmaurya53/PharmaShare',
+      live: 'https://pharma-share-pumq.vercel.app/'
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export default function Projects() {
       tags: ['React', 'Tailwind CSS', 'Vite', 'Framer Motion','Firebase','Cloudnary','resend'],
       color: '#FF00AA', // Magenta glow
       github: '#',
-      live: '#'
+      live: 'https://yarniverse-clean-4g9c.vercel.app/'
     }
   ];
 
